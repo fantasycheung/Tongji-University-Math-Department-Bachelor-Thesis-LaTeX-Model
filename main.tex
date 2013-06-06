@@ -1,0 +1,72 @@
+\documentclass[oneside,numberorder]{tjmath}
+%还有twoside选项，可以添加，类似book里的twoside
+%TODO：完善twoside选项
+\usepackage{lastpage}
+\usepackage{url}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+%可以自己添加数学类的操作符，这里只是举例
+
+\begin{document}
+  %\tjutitle{题目中文名}{题目英文名}
+	\tjutitle{股票挂钩型理财产品的定价模型及金融分析}{Pricing model of stock-linked financial products and financial analysis}
+  %\tjuauthor{中文名}{英文名}{学号}
+	\tjuauthor{李冰冰}{Binging Lee}{083666}
+  %\tjumentor{导师中文名}{导师英文名}
+	\tjumentor{张忠良}{Zhang.Z.L}
+  %\tjuinfo{年级}{专业名}
+	\tjuinfo{2009级}{数学与应用数学}
+  %\tjucollege{系中文名}{系英文名}
+	\tjucollege{数学系}{Math Department}
+  %之所以要输入英文名，是为了twoside里的英文封面做准备 TODO
+
+
+  %封面信息，可以在data文件夹下的cover.tex文件中自行修改样式，内容部分不用修改
+	\input{data/cover}
+  %申明部分，可以在data文件夹下的announce.tex文件中自行修改
+  \input{data/announce}
+
+  \frontmatter
+  \pagenumbering{Roman}
+    %中文摘要部分，英文部分可以自己添加
+  	\include{data/absc}
+
+  	\tableofcontents
+  	\chaptermark{目录}
+    \addcontentsline{toc}{chapter}{目录}
+
+  	\mainmatter
+%========================装订线部分，待测试===========================
+    %\setlength{\unitlength}{1mm}
+    %\begin{picture}(10,30)
+    %\put(-20,-180){\shortstack[c]{ %第一个负号向左移，第二个负向下移
+    %| \\ | \\| \\| \\| \\| \\| \\ 装\\
+    %| \\ | \\| \\| \\| \\| \\| \\ 订\\
+    %| \\ | \\| \\| \\| \\| \\| \\ 线\\
+    %| \\ | \\| \\| \\| \\| \\| }}
+    %\end{picture}
+%TODO
+
+
+ %=========================正文部分开始=================================
+
+    \include{data/chap1}
+    \include{data/chap2}
+    \include{data/chap3}
+    \include{data/chap4}
+%==========================正文部分结束=================================
+ 	\backmatter
+
+  \addcontentsline{toc}{chapter}{参考文献}
+  \chaptermark{参考文献}
+  \bibliography{data/tjbib}
+
+  %附录部分
+  \include{data/append}
+  %谢辞部分
+  \include{data/thanks}
+
+
+
+\end{document}

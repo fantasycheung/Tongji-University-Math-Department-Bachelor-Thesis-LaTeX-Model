@@ -1,0 +1,38 @@
+%======================================
+%%封面
+%======================================
+\thispagestyle{empty}
+
+\vspace{10mm}
+
+\begin{center}
+	\includegraphics[width=108mm]{pic/logo}
+\end{center}
+
+\centerline{\songti \erhao \textbf{本\, 科\, 生\, 毕\, 业\, 论\, 文}}
+\vspace{8mm}
+
+\begin{center}
+	\includegraphics[width=40mm]{pic/tj}
+\end{center}
+
+\vspace{32mm}
+
+\begin{tabbing}
+	\hspace{30mm} \= \songti\sihao 学生姓名： \=\underline{\makebox[6cm]{\sihao\tjuauthornamec} }\\[2mm]
+	\>\songti \sihao 学生学号：\> \underline{\makebox[6cm]{\sihao \tjuauthorid}} \\[2mm]
+	\>\songti \sihao 指导教师：\> \underline{\makebox[6cm]{\sihao \tjumentorc}}\\[2mm]
+	\> \songti\sihao 专\hspace{10mm}业： \> \underline{\makebox[6cm]{\sihao\tjugrade\hspace{3mm}\tjumajor}} \\[2mm]
+	\>\songti \sihao 学\hspace{10mm}院：\> \underline{\makebox[6cm]{\sihao \tjucollegec}}
+\end{tabbing}
+
+%======================================
+%双面设置
+%======================================
+\ifthenelse{\equal{\tjuside}{T}}{
+	\newpage\mbox{}
+	\thispagestyle{empty}}{}
+
+
+
+
